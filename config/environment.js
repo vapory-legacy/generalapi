@@ -14,20 +14,20 @@ module.exports = function (environment) {
         },
 
         APP: {
-            WebsiteName : 'daggerpool.com',
+            WebsiteName : 'pool.vapory.org',
             Currency : 'USD',
 
              EXP: {
                     // API host and port
-                    ApiUrl: '//exp.daggerpool.com/',
+                    ApiUrl: '//pool.vapory.org/',
 
                     // HTTP mining endpoint
-                    HttpHost: 'http://exp-us01.daggerpool.com',
-                    HttpPort: 40004,
+                    HttpHost: 'http://mining.vapory.org',
+                    HttpPort: 8888,
 
                     // Stratum mining endpoint
-                    StratumHost: 'exp-us01.daggerpool.com',
-                    StratumPort: 40014,
+                    StratumHost: 'stratum.vapory.org',
+                    StratumPort: 8008,
 
                     StratumHost1: 'exp-us02.daggerpool.com',
                     StratumPort1: 40014,
@@ -64,16 +64,16 @@ module.exports = function (environment) {
                     BlockTime: 30
              },
              UBIQ: {
-                     // API host and port
-                    ApiUrl: '//ubiq.daggerpool.com/',
+                    // API host and port
+                    ApiUrl: '//pool.vapory.org/',
 
                     // HTTP mining endpoint
-                    HttpHost: 'http://ubiq-us01.daggerpool.com',
-                    HttpPort: 40005,
+                    HttpHost: 'http://mining.vapory.org',
+                    HttpPort: 8888,
 
                     // Stratum mining endpoint
-                    StratumHost: 'ubiq-us01.daggerpool.com',
-                    StratumPort: 40015,
+                    StratumHost: 'stratum.vapory.org',
+                    StratumPort: 8008,
 
                     StratumHost1: 'ubiq-us02.daggerpool.com',
                     StratumPort1: 40015,
@@ -111,15 +111,15 @@ module.exports = function (environment) {
              },
         DBIX: {
             // API host and port
-            ApiUrl: '//dbix.daggerpool.com/',
+            ApiUrl: '//pool.vapory.org/',
 
             // HTTP mining endpoint
-            HttpHost: 'http://dbix-us01.daggerpool.com',
-            HttpPort: 40007,
+            HttpHost: 'http://mining.vapory.org',
+            HttpPort: 8888,
 
             // Stratum mining endpoint
-            StratumHost: 'dbix-us01.daggerpool.com',
-            StratumPort: 40017,
+            StratumHost: 'stratum.vapory.org',
+            StratumPort: 8008,
 
             StratumHost1: 'dbix-uk01.daggerpool.com',
             StratumPort1: 40017,
@@ -159,15 +159,15 @@ module.exports = function (environment) {
         },
         MUSIC:  {
             // API host and port
-            ApiUrl: '//music.daggerpool.com/',
+            ApiUrl: '//pool.vapory.org/',
 
             // HTTP mining endpoint
-            HttpHost: 'http://mc-us01.daggerpool.com',
-            HttpPort: 40003,
+            HttpHost: 'http://mining.vapory.org',
+            HttpPort: 8888,
 
             // Stratum mining endpoint
-            StratumHost: 'mc-us01.daggerpool.com',
-            StratumPort: 40013,
+            StratumHost: 'stratum.vapory.org',
+            StratumPort: 8008,
 
             StratumHost1: 'mc-uk01.daggerpool.com',
             StratumPort1: 40013,
@@ -218,11 +218,11 @@ module.exports = function (environment) {
             StratumHost: 'stratum.vapory.org',
             StratumPort: 8008,
 
-            StratumHost1: 'eth-uk01.daggerpool.com',
-            StratumPort1: 40011,
+            // StratumHost1: 'eth-uk01.daggerpool.com',
+            //  StratumPort1: 40011,
 
-            NicehashHost: 'eth-nh.daggerpool.com',
-            NicehashPost: 40021,
+            //NicehashHost: 'eth-nh.daggerpool.com',
+            //NicehashPost: 40021,
 
             // Fee and payout details
             PoolFee: '0.99%',
@@ -256,15 +256,15 @@ module.exports = function (environment) {
         },
         ETC: {
             // API host and port
-            ApiUrl: '//etc.daggerpool.com/',
+            ApiUrl: '//pool.vapory.org/',
 
             // HTTP mining endpoint
-            HttpHost: 'http://etc-us01.daggerpool.com',
-            HttpPort: 40002,
+            HttpHost: 'http://mining.vapory.org',
+            HttpPort: 8888,
 
             // Stratum mining endpoint
-            StratumHost: 'etc-us01.daggerpool.com',
-            StratumPort: 9009,
+            StratumHost: 'stratum.vapory.org',
+            StratumPort: 8008,
 
             StratumHost1: 'etc-uk01.daggerpool.com',
             StratumPort1: 9009,
