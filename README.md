@@ -1,4 +1,4 @@
-# General Consolidated Frontend for Ethash-mining-Pool (International Version)
+# General Consolidated Frontend for Vapash-mining-Pool (International Version)
 
 *Refer other branches for Indian Version
 

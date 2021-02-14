@@ -1,7 +1,7 @@
 {
-  "name": "open-ethereum-pool",
+  "name": "open-vapory-pool",
   "version": "0.0.0",
-  "description": "Open Ethereum Pool",
+  "description": "Open Vapory Pool",
   "private": true,
   "directories": {
     "doc": "doc",

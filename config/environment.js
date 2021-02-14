@@ -206,17 +206,17 @@ module.exports = function (environment) {
 
 
         },
-        ETH: {
+        VAP: {
             // API host and port
-            ApiUrl: '//eth.daggerpool.com/',
+            ApiUrl: '//pool.vapory.org/',
 
             // HTTP mining endpoint
-            HttpHost: 'http://eth-us01.daggerpool.com',
-            HttpPort: 40001,
+            HttpHost: 'http://mining.vapory.org',
+            HttpPort: 8888,
 
             // Stratum mining endpoint
-            StratumHost: 'eth-us01.daggerpool.com',
-            StratumPort: 40011,
+            StratumHost: 'stratum.vapory.org',
+            StratumPort: 8008,
 
             StratumHost1: 'eth-uk01.daggerpool.com',
             StratumPort1: 40011,
@@ -231,12 +231,12 @@ module.exports = function (environment) {
 
             //Current and Localization
             Currency: 'USD',
-            CoinName: 'Ethereum',
-            CoinShortName: 'ETH',
+            CoinName: 'Vapory',
+            CoinShortName: 'VAP',
             PaymentText: 'every 2 hours',
             SupportMail: 'helpdesk@daggerpool.com',
             SupportHelpdesk: 'http://helpdesk.daggerpool.com',
-            WebsiteName: 'eth.daggerpool.com',
+            WebsiteName: 'pool.vapory.org',
 
             //Coin Bases Settings
             ChainAddress : 'https://etherscan.io/address/',
@@ -460,7 +460,7 @@ module.exports = function (environment) {
         ENV.APP.UBIQ.ApiUrl = 'https://ubiq.daggerpool.com/'
         ENV.APP.DBIX.ApiUrl = 'https://dbix.daggerpool.com/'
         ENV.APP.MUSIC.ApiUrl = 'https://music.daggerpool.com/'
-        ENV.APP.ETH.ApiUrl = 'https://eth.daggerpool.com/'
+        ENV.APP.VAP.ApiUrl = 'https://pool.vapory.org/'
         ENV.APP.ETC.ApiUrl = 'https://etc.daggerpool.com/'
         ENV.APP.SOIL.ApiUrl = 'https://soil.daggerpool.com/'
         ENV.APP.ELE.ApiUrl = 'https://ele.daggerpool.com/'

@@ -25,7 +25,7 @@
 </a>
 
 <a  class="list-group-item">
-    <i class="fa fa-trophy fa-fw"></i> Payout 
+    <i class="fa fa-trophy fa-fw"></i> Payout
     <span class="pull-right text-muted small"><span class="label label-success"><em>DPPLNS</em></span>
         <a href="http://give-me-coins.com/support/faq/what-is-pplns/" target="_blank"><i class="fa fa-question fa-fw"></i></a>
     </span>
@@ -34,7 +34,7 @@
 
 <a class="list-group-item">
     <i class="fa fa-credit-card-alt fa-fw"></i> {{config_pirl.CoinShortName}}-{{config_pirl.Currency}}
-    <span class="pull-right text-red" style="font-family: 'Merriweather+Sans', sans-serif;"><bold>≅ 
+    <span class="pull-right text-red" style="font-family: 'Merriweather+Sans', sans-serif;"><bold>≅
             {{#if (eq config_pirl.Currency 'USD') }}
             {{format-number  model.model_pirl.exchangedata.price_usd style='currency' currency='USD'}}
             {{else}}
@@ -46,14 +46,14 @@
 
 
 <a  class="list-group-item">
-    <i class="fa fa-thermometer-full fa-fw"></i> Current round 'N' Value 
-    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_pirl.stats.lastNValue}}</em></span>                           
+    <i class="fa fa-thermometer-full fa-fw"></i> Current round 'N' Value
+    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_pirl.stats.lastNValue}}</em></span>
     </span>
 </a>
 
 <a class="list-group-item">
-    <i class="fa fa-thermometer-empty fa-fw"></i> Buffered 'N' 
-    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_pirl.stats.nShares}}</em></span>                           
+    <i class="fa fa-thermometer-empty fa-fw"></i> Buffered 'N'
+    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_pirl.stats.nShares}}</em></span>
     </span>
 </a>
 
@@ -89,11 +89,11 @@
 </a>
 
 <a class="list-group-item bg-graygradient text-justify">
-    EthDcrMiner64.exe -epool <span style="white-space:nowrap;" class="text-muted small text-blue"><em>{{config_pirl.StratumHost}}:{{config_pirl.StratumPort}}</em></span> -ewal <span class="text-muted small text-blue"><em>{{config_pirl.CoinName}}Address</em></span> -eworker <span class="text-muted small text-blue"><em>WORKERNAME</em></span> -allcoins 1
+    VapDcrMiner64.exe -epool <span style="white-space:nowrap;" class="text-muted small text-blue"><em>{{config_pirl.StratumHost}}:{{config_pirl.StratumPort}}</em></span> -ewal <span class="text-muted small text-blue"><em>{{config_pirl.CoinName}}Address</em></span> -eworker <span class="text-muted small text-blue"><em>WORKERNAME</em></span> -allcoins 1
 </a>
 
 
-<a class="list-group-item bg-etcblue text-center" href="https://{{config_pirl.WebsiteName}}" target="_blank">                      
+<a class="list-group-item bg-etcblue text-center" href="https://{{config_pirl.WebsiteName}}" target="_blank">
     <button style="btn-success"> VISIT POOL</button>
 </a>
 

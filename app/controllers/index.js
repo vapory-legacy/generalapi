@@ -2,7 +2,7 @@ import Ember from 'ember';
 import config from '../config/environment';
 
 export default Ember.Controller.extend({
-        
+
     get config_ubiq() {
         return config.APP.UBIQ  ;
     },
@@ -22,14 +22,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_ubiq.stats.roundShares'));
         }
     }),
-    
-    ethinr_ubiq: Ember.computed('stats', {
+
+    vapinr_ubiq: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_ubiq.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_ubiq: Ember.computed({
+
+     vapusd_ubiq: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_ubiq.exchangedata.price_usd'));
         }
@@ -87,14 +87,14 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_ubiq: Ember.computed('height_ubiq', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_ubiq', 1) % 30000)) * 1000 * this.get('config_exp').BlockTime;
             return Date.now() + epochOffset;
         }
     }),
-    
+
      get config_exp() {
         return config.APP.EXP  ;
     },
@@ -114,14 +114,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_exp.stats.roundShares'));
         }
     }),
-    
-    ethinr_exp: Ember.computed('stats', {
+
+    vapinr_exp: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_exp.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_exp: Ember.computed({
+
+     vapusd_exp: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_exp.exchangedata.price_usd'));
         }
@@ -179,7 +179,7 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_exp: Ember.computed('height_exp', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_exp', 1) % 30000)) * 1000 * this.get('config_exp').BlockTime;
@@ -205,14 +205,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_dbix.stats.roundShares'));
         }
     }),
-    
-    ethinr_dbix: Ember.computed('stats', {
+
+    vapinr_dbix: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_dbix.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_dbix: Ember.computed({
+
+     vapusd_dbix: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_dbix.exchangedata.price_usd'));
         }
@@ -270,7 +270,7 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_dbix: Ember.computed('height_dbix', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_dbix', 1) % 30000)) * 1000 * this.get('config_dbix').BlockTime;
@@ -296,14 +296,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_music.stats.roundShares'));
         }
     }),
-    
-    ethinr_music: Ember.computed('stats', {
+
+    vapinr_music: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_music.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_music: Ember.computed({
+
+     vapusd_music: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_music.exchangedata.price_usd'));
         }
@@ -361,21 +361,21 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_music: Ember.computed('height_music', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_music', 1) % 30000)) * 1000 * this.get('config_music').BlockTime;
             return Date.now() + epochOffset;
         }
     }),
-    
-    get config_eth() {
-        return config.APP.ETH  ;
+
+    get config_vap() {
+        return config.APP.VAP  ;
     },
 
-    height_eth: Ember.computed('model.model_eth.nodes', {
+    height_vap: Ember.computed('model.model_vap.nodes', {
         get() {
-            var node = this.get('bestNode_eth');
+            var node = this.get('bestNode_vap');
             if (node) {
                 return node.height;
             }
@@ -383,27 +383,27 @@ export default Ember.Controller.extend({
         }
     }),
 
-    roundShares_eth: Ember.computed('model.model_eth.stats', {
+    roundShares_vap: Ember.computed('model.model_vap.stats', {
         get() {
-            return parseInt(this.get('model.model_eth.stats.roundShares'));
-        }
-    }),
-    
-    ethinr_eth: Ember.computed('stats', {
-        get() {
-            return parseFloat(this.get('model.model_eth.exchangedata.price_inr'));
-        }
-    }),
-    
-     ethusd_eth: Ember.computed({
-        get() {
-            return parseFloat(this.get('model.model_eth.exchangedata.price_usd'));
+            return parseInt(this.get('model.model_vap.stats.roundShares'));
         }
     }),
 
-    difficulty_eth: Ember.computed('model.model_eth.nodes', {
+    vapinr_vap: Ember.computed('stats', {
         get() {
-            var node = this.get('bestNode_eth');
+            return parseFloat(this.get('model.model_vap.exchangedata.price_inr'));
+        }
+    }),
+
+     vapusd_vap: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_vap.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_vap: Ember.computed('model.model_vap.nodes', {
+        get() {
+            var node = this.get('bestNode_vap');
             if (node) {
                 return node.difficulty;
             }
@@ -411,22 +411,22 @@ export default Ember.Controller.extend({
         }
     }),
 
-    hashrate_eth: Ember.computed('difficulty_eth', {
+    hashrate_vap: Ember.computed('difficulty_vap', {
         get() {
-            return this.getWithDefault('difficulty_eth', 0) / config.APP.MUSIC.BlockTime;
+            return this.getWithDefault('difficulty_vap', 0) / config.APP.MUSIC.BlockTime;
         }
     }),
 
-    immatureTotal_eth: Ember.computed('model.model_eth', {
+    immatureTotal_vap: Ember.computed('model.model_vap', {
         get() {
-            return this.getWithDefault('model.model_eth.immatureTotal', 0) + this.getWithDefault('model.model_eth.candidatesTotal', 0);
+            return this.getWithDefault('model.model_vap.immatureTotal', 0) + this.getWithDefault('model.model_vap.candidatesTotal', 0);
         }
     }),
 
-    bestNode_eth: Ember.computed('model.model_eth.nodes', {
+    bestNode_vap: Ember.computed('model.model_vap.nodes', {
         get() {
             var node = null;
-            this.get('model.model_eth.nodes').forEach(function (n) {
+            this.get('model.model_vap.nodes').forEach(function (n) {
                 if (!node) {
                     node = n;
                 }
@@ -438,29 +438,29 @@ export default Ember.Controller.extend({
         }
     }),
 
-    lastBlockFound_eth: Ember.computed('model.model_eth.', {
+    lastBlockFound_vap: Ember.computed('model.model_vap.', {
         get() {
-            return parseInt(this.get('model.model_eth.lastBlockFound')) || 0;
+            return parseInt(this.get('model.model_vap.lastBlockFound')) || 0;
         }
     }),
 
-    roundVariance_eth: Ember.computed('model.model_eth.', {
+    roundVariance_vap: Ember.computed('model.model_vap.', {
         get() {
-            var percent = (this.get('model.model_eth.stats.roundShares')* 4000000000) / this.get('difficulty');
+            var percent = (this.get('model.model_vap.stats.roundShares')* 4000000000) / this.get('difficulty');
             if (!percent) {
                 return 0;
             }
             return percent.toFixed(2);
         }
     }),
-   
-    nextEpoch_eth: Ember.computed('height_eth', {
+
+    nextEpoch_vap: Ember.computed('height_vap', {
         get() {
-            var epochOffset = (30000 - (this.getWithDefault('height_eth', 1) % 30000)) * 1000 * this.get('config_eth').BlockTime;
+            var epochOffset = (30000 - (this.getWithDefault('height_vap', 1) % 30000)) * 1000 * this.get('config_vap').BlockTime;
             return Date.now() + epochOffset;
         }
     }),
-    
+
     get config_etc() {
         return config.APP.ETC  ;
     },
@@ -480,14 +480,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_etc.stats.roundShares'));
         }
     }),
-    
-    ethinr_etc: Ember.computed('stats', {
+
+    vapinr_etc: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_etc.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_etc: Ember.computed({
+
+     vapusd_etc: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_etc.exchangedata.price_usd'));
         }
@@ -545,15 +545,15 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_etc: Ember.computed('height_etc', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_etc', 1) % 30000)) * 1000 * this.get('config_etc').BlockTime;
             return Date.now() + epochOffset;
         }
     }),
-    
-    
+
+
     get config_soil() {
         return config.APP.SOIL  ;
     },
@@ -573,14 +573,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_soil.stats.roundShares'));
         }
     }),
-    
-    ethinr_soil: Ember.computed('stats', {
+
+    vapinr_soil: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_soil.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_soil: Ember.computed({
+
+     vapusd_soil: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_soil.exchangedata.price_usd'));
         }
@@ -638,14 +638,14 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_soil: Ember.computed('height_soil', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_soil', 1) % 30000)) * 1000 * this.get('config_soil').BlockTime;
             return Date.now() + epochOffset;
         }
     }),
-    
+
     get config_ele() {
         return config.APP.ELE  ;
     },
@@ -665,14 +665,14 @@ export default Ember.Controller.extend({
             return parseInt(this.get('model.model_ele.stats.roundShares'));
         }
     }),
-    
-    ethinr_ele: Ember.computed('stats', {
+
+    vapinr_ele: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_ele.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_ele: Ember.computed({
+
+     vapusd_ele: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_ele.exchangedata.price_usd'));
         }
@@ -730,20 +730,20 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_ele: Ember.computed('height_ele', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_ele', 1) % 30000)) * 1000 * this.get('config_ele').BlockTime;
             return Date.now() + epochOffset;
         }
     }),
-    
-    
-    
+
+
+
    get config_pirl() {
         return config.APP.PIRL  ;
     },
-    
+
     height_pirl: Ember.computed('model.model_pirl.nodes', {
         get() {
             var node = this.get('bestNode_pirl');
@@ -753,20 +753,20 @@ export default Ember.Controller.extend({
             return 0;
         }
     }),
-   
+
     roundShares_pirl: Ember.computed('model.model_pirl.stats', {
         get() {
             return parseInt(this.get('model.model_pirl.stats.roundShares'));
         }
     }),
-    
-    ethinr_pirl: Ember.computed('stats', {
+
+    vapinr_pirl: Ember.computed('stats', {
         get() {
             return parseFloat(this.get('model.model_pirl.exchangedata.price_inr'));
         }
     }),
-    
-     ethusd_pirl: Ember.computed({
+
+     vapusd_pirl: Ember.computed({
         get() {
             return parseFloat(this.get('model.model_pirl.exchangedata.price_usd'));
         }
@@ -824,16 +824,16 @@ export default Ember.Controller.extend({
             return percent.toFixed(2);
         }
     }),
-   
+
     nextEpoch_pirl: Ember.computed('height_pirl', {
         get() {
             var epochOffset = (30000 - (this.getWithDefault('height_pirl', 1) % 30000)) * 1000 * this.get('config_pirl').BlockTime;
             return Date.now() + epochOffset;
         }
     })
-    
-    
-    
-   
-    
+
+
+
+
+
 });
